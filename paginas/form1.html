@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../form.html">Início</a>
+        <a href="form2.html">Página 2</a>
+    </nav>
+    <h1>Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <div>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <P>
+                    <label for="inome">Nome</label>
+                    <input type="text" name="Nome" id="inome" required minlength="3" placeholder="Nome">
+                </P>
+                <p>
+                    <label for="iemail">e-mail:</label>
+                    <input type="email" name="email" id="iemail" required size="30" placeholder="nome@email.com">
+                </p>
+                <p>
+                    <label for="itel">Telefone:</label>
+                        <input type="tel" name="tel" id="itel" required autocomplete="tel"
+                        pattern="^\(\d{2}\)\d{4,5}-\d{4,5}$" placeholder="(xx) xxxxx-xxxx"> <!-- ESTUDAR MAIS SOBRE REGEX-->
+                </p>
+            </fieldset>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </div>
+
+    </form>
+</body>
+</html>

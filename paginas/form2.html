@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../form.html">Início</a>
+        <a href="form1.html">Página 1</a>
+    </nav>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="imas" checked> <label for="imas">Masculino</label>
+            <input type="radio" name="sexo" id="ifem"> <label for="ifem">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="fut" id="ifut"> <label for="ifut">Futebol</label> <br>
+            <input type="checkbox" name="vol" id="ivol" checked> <label for="ivol">Volei</label> <br>
+            <input type="checkbox" name="bas" id="ibas"> <label for="ibas">Basquete</label> <br>
+            <input type="checkbox" name="nat" id="inat" checked> <label for="inat">Natação</label> <br>
+            <input type="checkbox" name="ate" id="iate"> <label for="iate">Atletismo</label> <br>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <h1>Outros Exemplos</h1>
+        <fieldset>
+            <legend>Exemplos</legend>
+            <p><input type="color" name="cor" id="icor"> 
+                <label for="icor">Cor</label></p> <br>
+
+            <p><output name="val" id="ival">0</output>
+                <input type="range" name="niv" id="iniv" min="0" max="10" value="0" oninput="ival.innerHTML = Number(iniv.value)"> 
+                <label for="inev">Nível</label></p> <br>
+
+            <p><input type="file" name="foto" id="ifoto"> 
+                <label for="ifoto">Foto</label></p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <h1>Outros Exemplos</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+            
+            <p>
+                <label for="iest">Estado:</label>
+                <select name="est" id="iest">
+                
+                <option value="">--- Escolha ---</option>
+                <optgroup label="Região Norte">
+                    <option value="AC">Acre</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="PA">Pará</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="AL">Alagoas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+                <optgroup label="Região Centro Oeste">
+                    <option value="GO">Goias</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                </optgroup>
+                <optgroup label="Região Sudeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+                <optgroup label=" Região Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="iprof">Profissão:</label>
+                <input type="text" name="prof" id="iprof" list="lsprof">
+                <datalist id="lsprof">
+                    <option>Adiministração</option>
+                    <option>Mecânico</option>
+                    <option>Eletricista</option>
+                    <option>Técnico em Informática</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="imsg">Mensagem:</label> <br>
+                <textarea name="msg" id="imsg" cols="60" rows="10"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+
+    </form>
+    <h1>Exemplo output e oninput</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="in1">nº 1</label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">nº 2</label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="isoma">Soma</label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <h1>Outro Exemplo output e oninput</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iano">Ano de Nascimeno:</label>
+            <input type="number" name="ano" id="iano" min="1800" max="2025" oninput="calcidade()">
+        </p>
+        <p>
+            <label for="iid">Idade:</label>
+            <output name="id" id="iid">0</output>
+        </p>
+    </form>
+    <script>
+        function calcidade() {
+            let atual = new Date().getFullYear()
+            iid.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
+
+</body>
+</html>

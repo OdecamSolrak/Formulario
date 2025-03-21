@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="paginas/form1.html">Pagina 1</a>
+        <a href="paginas/form2.html">Página 2</a>
+    </nav>
+    <h1>1° Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+
+    <h1>2° Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário:</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="20" size="22" placeholder="mínomo 5 caracteres" autocomplete="username">
+        </p>
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen" required minlength="7" maxlength="20" size="22" placeholder="mínino 7 caracteres" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <h1>3º Formulário</h1>
+
+        <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inom">Nome:</label>
+            <input type="text" name="nom" id="inom" autocomplete="name" placeholder="Nome Completo" required maxlength="50" size="55">
+        </p>
+
+        <p>
+            <label for="inasc">Data de Nascimento</label>
+            <input type="date" name="Nasc" id="inasc" required value="2025-03-17" >
+
+            <label for="iidade">Idade</label>
+            <input type="number" name="Idade" id="iidade" min="0" max="150">
+
+            <label for="ihora">Hora</label>
+            <input type="time" name="Hora" id="ihora">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        </form>
+</body>
+</html>
